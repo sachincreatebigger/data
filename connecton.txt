@@ -1,0 +1,11 @@
+// Connection URI
+const uri = "mongodb+srv://sachinmaurya73607:v6SozuU1EJkqpoIu@sachin.y0vat3i.mongodb.net/?retryWrites=true&w=majority&appName=sachin";
+
+// Connect to MongoDB
+mongoose.connect(uri, {
+    serverSelectionTimeoutMS: 5000 // Adjust the timeout as needed
+}).then(() => {
+    console.log("MongoDB connected successfully");
+}).catch(err => {
+    console.error("MongoDB connection error:", err);
+});
